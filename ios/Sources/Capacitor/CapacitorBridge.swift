@@ -108,7 +108,7 @@ open class CapacitorBridge: NSObject, CAPBridgeProtocol {
     var plugins =  [String: CapacitorPlugin]()
     // Calls we are storing to resolve later
     var storedCalls = ConcurrentDictionary<CAPPluginCall>()
-    // Whether to inject the Cordova files
+    // Whether a Cordova plugin is loaded, in which case Cordova sends the pause and resume events
     private var cordovaIsPresent = false
     private var injectMiscFiles: [String] = []
     private var canInjectJS: Bool = true
